@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
+import order.OrderModel;
 
 
 import static constant.SamokatYandexApi.*;

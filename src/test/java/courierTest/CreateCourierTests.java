@@ -1,36 +1,11 @@
-package CourierTest;
-import courier.CourierAssert;
-import courier.CourierCreds;
-import courier.CourierModel;
-import courier.CourierRandomizer;
+package courierTest;
+import courier.*;
 import io.qameta.allure.Description;
-import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-public class CreateCourierTests {
-    protected final CourierRandomizer courierRandomizer = new CourierRandomizer();
-    int courierId;
-    private CourierSteps courierSteps;
-    private CourierModel courierModel;
-    private CourierAssert courierAssert;
+public class CreateCourierTests extends Fixture {
 
-    @Before
-    @Step("Создание тестовых данных курьера")
-    public void setUp() {
-        courierSteps = new CourierSteps();
-        courierModel = courierRandomizer.createNewRandomCourier();
-        courierAssert = new CourierAssert();
-    }
-    @After
-    @Step("Удаление тестовых данных")
-    public void deleteCourier() {
-        if (courierId != 0) {
-            courierSteps.deleteCourier(courierId);
-        }
-    }
     @Test
     @DisplayName("Создание нового курьера")
     @Description("Проверяем, что курьера можно создать")

@@ -1,4 +1,4 @@
-package CourierTest;
+package courier;
 import courier.CourierCreds;
 import courier.CourierModel;
 import io.qameta.allure.Step;
